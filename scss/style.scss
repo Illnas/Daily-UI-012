@@ -1,0 +1,556 @@
+@import "./config";
+
+#nav {
+  background-color: rgb(43, 43, 43);
+  width: 80%;
+  height: 100px;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  top: 0px;
+  padding: 30px;
+  z-index: 10;
+
+  &-links {
+    font-size: 20px;
+    margin-left: 30px;
+
+    a {
+      text-decoration: none;
+      margin: 0 20px;
+      color: #fff;
+    }
+
+    a:hover {
+      color: rgb(255, 109, 109);
+      font-size: 21px;
+    }
+  }
+
+  &-store {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+
+    span {
+      background-color: #fff;
+      height: 60px;
+      width: 60px;
+      margin: 0 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span:hover {
+      background-color: rgb(255, 109, 109);
+      height: 65px;
+      width: 65px;
+    }
+  }
+}
+
+.wrapper {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  height: 200px;
+  width: 1400px;
+  text-align: center;
+
+  &-para {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 50px;
+  }
+}
+
+.envi {
+  background: rgb(245, 165, 165);
+  width: 1400px;
+  height: 500px;
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 18px;
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  &-description {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 50px;
+    width: 350px;
+    margin-top: 300px;
+  }
+}
+
+.offer {
+  background: rgb(255, 255, 255);
+  margin-bottom: 100px;
+  width: 1400px;
+
+  &-intro {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 22px;
+
+    p {
+      margin-top: 75px;
+      margin-bottom: 30px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  &-container {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+
+    .offer-package {
+      padding: 20px;
+      margin: 20px 40px;
+      height: 500px;
+      border: 1px solid #c9c9c9;
+      border-radius: 7px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+
+      &-title {
+        text-align: center;
+        border-bottom: 1px solid rgb(5, 5, 5);
+        margin-bottom: 20px;
+      }
+
+      &-description {
+        text-align: justify;
+        margin: 0 30px;
+      }
+
+      &-price {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      &-button {
+        margin-top: 10px;
+        width: 100px;
+        height: 35px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(5, 5, 5);
+        border-radius: 5px;
+      }
+
+      &-button:hover {
+        background-color: rgb(36, 36, 36);
+        border: 1px solid rgb(151, 50, 50);
+        color: #fff;
+      }
+    }
+  }
+}
+
+#history {
+  background-color: #fff;
+  margin-bottom: 100px;
+  width: 1400px;
+
+  .history {
+    margin: 75px 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+
+    &-title {
+      margin: 40px 0;
+      padding: 0 40px;
+    }
+
+    &-para {
+      margin: 40px 0;
+      padding: 0 40px;
+    }
+  }
+}
+
+.footer {
+  background-color: rgb(131, 131, 131);
+  color: #fff;
+  width: 1400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-text {
+    margin: 100px 0;
+    padding: 0 140px;
+    font-size: 18px;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-links {
+    margin: 0 100px;
+    li {
+      float: left;
+      display: inline;
+      width: 400px;
+      margin: 5px;
+      a {
+        text-decoration: none;
+        margin-left: 10px;
+        color: rgb(255, 122, 122);
+      }
+      a:hover {
+        font-size: 19px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include media-sm {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+
+  #nav {
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    width: 300px;
+    padding: 30px;
+    &-links {
+      font-size: 12px;
+      margin-left: 10px;
+      a {
+        margin: 0 10px;
+      }
+      a:hover {
+        font-size: 13px;
+      }
+    }
+    &-store {
+      margin-right: 10px;
+      span {
+        background-color: #fff;
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+      }
+      span:hover {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .wrapper {
+    margin-top: 150px;
+  }
+
+  .intro {
+    width: 390px;
+    height: 200px;
+    text-align: center;
+    &-para {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 30px;
+    }
+  }
+
+  .envi {
+    width: 390px;
+    height: 400px;
+    margin: 50px 0;
+    padding: 0 40px;
+    &-btn {
+      width: 35px;
+      height: 35px;
+      border-radius: 18px;
+      margin-top: 50px;
+      span {
+        width: 30px;
+        height: 50px;
+      }
+    }
+  }
+
+  .offer {
+    width: 390px;
+    margin-bottom: 100px;
+    padding: 0 30px;
+    &-intro {
+      border-bottom: 1px solid rgb(0, 0, 0);
+      font-size: 14px;
+      line-height: 30px;
+      p {
+        margin-top: 45px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    &-container {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      .offer-package {
+        padding: 10px;
+        margin: 20px 10px;
+        height: 300px;
+        font-size: 12px;
+        &-title {
+          text-align: center;
+          border-bottom: 1px solid rgb(5, 5, 5);
+          margin-bottom: 5px;
+        }
+        &-description {
+          margin: 0 5px;
+        }
+        &-price {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  #history {
+    background-color: #fff;
+    margin-bottom: 100px;
+    width: 390px;
+    .history {
+      margin: 45px 20px;
+      font-size: 12px;
+    }
+  }
+
+  .footer {
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-text {
+      margin: 10px 20px;
+      padding: 0 14px;
+      font-size: 14px;
+      h1 {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-links {
+      font-size: 14px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      li {
+        width: 100%;
+        margin: 5px;
+        a {
+          margin-left: 10px;
+        }
+        a:hover {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@include media-md {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+
+  #nav {
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+    width: 600px;
+    padding: 30px;
+    &-links {
+      font-size: 12px;
+      margin-left: 10px;
+      a {
+        margin: 0 10px;
+      }
+      a:hover {
+        font-size: 13px;
+      }
+    }
+    &-store {
+      margin-right: 10px;
+      span {
+        background-color: #fff;
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+      }
+      span:hover {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .wrapper {
+    margin-top: 150px;
+  }
+
+  .intro {
+    width: 700px;
+    height: 250px;
+    text-align: center;
+    &-para {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0 30px;
+    }
+  }
+
+  .envi {
+    width: 700px;
+    height: 500px;
+    margin: 50px 0;
+    padding: 0 40px;
+    &-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 18px;
+      margin-top: 50px;
+      span {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .offer {
+    width: 700px;
+    margin-bottom: 100px;
+    padding: 0 30px;
+    &-intro {
+      border-bottom: 1px solid rgb(0, 0, 0);
+      font-size: 16px;
+      line-height: 30px;
+      p {
+        margin-top: 45px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    &-container {
+      margin: 10px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      justify-content: space-between;
+      .offer-package {
+        padding: 10px;
+        margin: 20px 10px;
+        height: 400px;
+        font-size: 14px;
+        &-title {
+          text-align: center;
+          border-bottom: 1px solid rgb(5, 5, 5);
+          margin-bottom: 5px;
+        }
+        &-description {
+          margin: 0 5px;
+        }
+        &-price {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  #history {
+    background-color: #fff;
+    margin-bottom: 100px;
+    width: 700px;
+    .history {
+      margin: 45px 20px;
+      font-size: 14px;
+    }
+  }
+
+  .footer {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-text {
+      margin: 10px 20px;
+      padding: 0 14px;
+      font-size: 14px;
+      h1 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-links {
+      font-size: 14px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      li {
+        width: 100%;
+        margin: 5px;
+        a {
+          margin-left: 10px;
+        }
+        a:hover {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+
+}
